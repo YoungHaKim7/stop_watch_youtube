@@ -7,7 +7,13 @@ fn main() {
     let mut seconds_remaining = total_seconds;
 
     while seconds_remaining > 0 {
-        print!("\r\t\t방송 시작 {}  초 전 ", seconds_remaining);
+        let print_min_remaing = seconds_remaining / 60;
+        let print_seconds_remaing = seconds_remaining % 60;
+
+        print!(
+            "\r\t\t방송 시작:   {}  분(min) {} 초(sec)   전 ",
+            print_min_remaing, print_seconds_remaing
+        );
         std::io::stdout().flush().unwrap();
         thread::sleep(Duration::from_secs(1));
         seconds_remaining -= 1;
