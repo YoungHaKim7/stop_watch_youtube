@@ -19,5 +19,5 @@ fn main() {
         seconds_remaining -= 1;
     }
 
-    println!("Countdown finished! 방송 시작 하겠습니다.");
+    println!("\r\t\tCountdown finished! 방송 시작 하겠습니다.");
 }
