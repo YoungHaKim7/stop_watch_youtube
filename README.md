@@ -1,12 +1,18 @@
-# stop_watch_youtube# Result
+# stop_watch_youtube
 
-```
+- ```cargo run -q```
 
-cargo run
-   Compiling stop_watch_youtube v0.1.0 (/home/gy/Utilities/stop_watch_youtube)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.11s
-     Running `target/debug/stop_watch_youtube`
+```bash
 
-   	방송 시작:   9  분(min) 49 초(sec)   전
+--- 몇초로 할까요? setting sec : ---
+600
+		방송 시작:   9  분(min) 52 초(sec)   전
+
+
+$ cargo run -q
+--- 몇초로 할까요? setting sec : ---
+10
+		Countdown finished! 방송 시작 하겠습니다
+
 
 ```

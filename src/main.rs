@@ -1,10 +1,14 @@
-use std::io::Write;
+use std::io::{self, Write};
 use std::thread;
 use std::time::Duration;
 
 fn main() {
-    let total_seconds = 600;
-    let mut seconds_remaining = total_seconds;
+    println!("--- 몇초로 할까요? setting sec : --- ");
+    let mut total_seconds = String::new();
+    io::stdin()
+        .read_line(&mut total_seconds)
+        .expect("Failed to read line");
+    let mut seconds_remaining: i32 = total_seconds.trim().parse().expect("InPut not an integer");
 
     while seconds_remaining > 0 {
         let print_min_remaing = seconds_remaining / 60;
